@@ -101,6 +101,10 @@ describe ChessBoard do
       @chess_board.move(@white_pawn, Position.new(4,1), :FORWARD).should == [Position.new(4,2), nil]
       @chess_board.move(@white_pawn, Position.new(4,2), :LEFT).should == [Position.new(3,2), nil]
       @chess_board.move(@white_pawn, Position.new(3,2), :RIGHT).should == [Position.new(4,2), nil]
+      
+      @chess_board.move(@black_pawn, Position.new(3,6), :FORWARD).should == [Position.new(3,5), nil]
+      @chess_board.move(@black_pawn, Position.new(3,5), :LEFT).should == [Position.new(4,5), nil]
+      @chess_board.move(@black_pawn, Position.new(4,5), :RIGHT).should == [Position.new(3,5), nil]
     end
     
     it "should move the white chess piece if it is a valid move (with capture)" do
