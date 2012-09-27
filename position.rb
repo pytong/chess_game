@@ -4,4 +4,8 @@ class Position
     @x = x
     @y = y
   end
+  
+  def ==(other)
+    (x == other.x && y == other.y)
+  end
 end
