@@ -11,7 +11,7 @@ class ChessBoard
       to_position = target_position(chess_piece, from_position, direction)
       @chess_board[from_position.x][from_position.y] = nil
       captured_chess_piece = @chess_board[to_position.x][to_position.y] if @chess_board[to_position.x][to_position.y]
-      @chess_board[to_position.x][to_position.y] = chess_piece if to_position
+      @chess_board[to_position.x][to_position.y] = chess_piece
       return [to_position, captured_chess_piece]
     end
     [nil, nil]
